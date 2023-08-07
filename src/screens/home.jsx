@@ -21,22 +21,19 @@ export default function Home({ navigation }) {
                 <Text style={{fontSize: spacings[10], color: 'white'}}>...</Text>
             </View> */}
             <View style={styles.homeBottomSection}>
-                <View style={{flex:2, fontFamily: typography.secondry,
-                fontSize: spacings[4],}}>
+                <View style={{flex:2}}>
                     <AntDesign name="star" size={24} color="black" />
                     <Text style={{fontFamily: typography.secondry,
                     fontSize: spacings[4],}}>Favourite</Text>
                 </View>
-                <View style={{flex:2, fontFamily: typography.secondry,
-                fontSize: spacings[4],}}>
+                <View style={{flex:2}}>
                     <AntDesign name="clockcircle" size={24} color="black" />
                     <Text style={{fontFamily: typography.secondry,
                     fontSize: spacings[4],}}>Recent</Text>
                 </View>
                 <Pressable onPress={() => {
                     navigation.navigate('CallWindow')
-                }} style={{flex:2, fontFamily: typography.secondry,
-                    fontSize: spacings[4],}}>
+                }} style={{flex:2}}>
                     <MaterialIcons name="perm-contact-cal" size={24} color="black" />
                     <Text style={{fontFamily: typography.secondry,
                     fontSize: spacings[4],}}>Contacts</Text>
@@ -49,7 +46,7 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
     homeContainer: {
         flex: 1,
-        paddingTop: 25,
+        paddingTop: 20,
         backgroundColor: 'white',
     },
     homeCenterTitle: {

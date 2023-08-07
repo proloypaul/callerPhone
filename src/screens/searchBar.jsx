@@ -1,7 +1,7 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import { typography } from '../theme/typography'
-import { Icon } from 'react-native-vector-icons/AntDesign'
+import { Entypo } from '@expo/vector-icons';
 import { spacings } from '../theme/spacing'
 import { FontAwesome5 } from '@expo/vector-icons';
 
@@ -13,6 +13,7 @@ export default function SearchBar() {
             <View style={styles.searchBar}>
                 <FontAwesome5 name="search" size={24} color="black" />
                 <Text style={styles.searchText}>Search your contact person</Text>
+                <Entypo name="dots-three-vertical" size={15} color="black" />
             </View>
 
         </SafeAreaView>
