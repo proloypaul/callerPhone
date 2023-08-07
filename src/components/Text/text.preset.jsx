@@ -1,5 +1,5 @@
 import { colors } from "../../theme/color";
-import { typography } from "../../theme/typography ";
+import { typography } from "../../theme/typography";
 
 
 const BASE = {
