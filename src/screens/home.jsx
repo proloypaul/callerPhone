@@ -1,8 +1,10 @@
 import React from 'react'
-import { SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import SearchBar from './searchBar'
 import { typography } from '../theme/typography'
 import { spacings } from '../theme/spacing'
+import { AntDesign } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 
 export default function Home({ navigation }) {
@@ -19,12 +21,26 @@ export default function Home({ navigation }) {
                 <Text style={{fontSize: spacings[10], color: 'white'}}>...</Text>
             </View> */}
             <View style={styles.homeBottomSection}>
-                <Text style={{flex:2, fontFamily: typography.secondry,
-        fontSize: spacings[4],}}>Favourite</Text>
-                <Text style={{flex:2, fontFamily: typography.secondry,
-        fontSize: spacings[4],}}>Recent</Text>
-                <Text style={{flex:2, fontFamily: typography.secondry,
-        fontSize: spacings[4],}}>Contacts</Text>
+                <View style={{flex:2, fontFamily: typography.secondry,
+                fontSize: spacings[4],}}>
+                    <AntDesign name="star" size={24} color="black" />
+                    <Text style={{fontFamily: typography.secondry,
+                    fontSize: spacings[4],}}>Favourite</Text>
+                </View>
+                <View style={{flex:2, fontFamily: typography.secondry,
+                fontSize: spacings[4],}}>
+                    <AntDesign name="clockcircle" size={24} color="black" />
+                    <Text style={{fontFamily: typography.secondry,
+                    fontSize: spacings[4],}}>Recent</Text>
+                </View>
+                <Pressable onPress={() => {
+                    navigation.navigate('CallWindow')
+                }} style={{flex:2, fontFamily: typography.secondry,
+                    fontSize: spacings[4],}}>
+                    <MaterialIcons name="perm-contact-cal" size={24} color="black" />
+                    <Text style={{fontFamily: typography.secondry,
+                    fontSize: spacings[4],}}>Contacts</Text>
+                </Pressable>
             </View>
         </SafeAreaView>
     )
@@ -34,7 +50,6 @@ const styles = StyleSheet.create({
     homeContainer: {
         flex: 1,
         paddingTop: 25,
-        paddingHorizontal: 20,
         backgroundColor: 'white',
     },
     homeCenterTitle: {
