@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './src/screens/home';
 import CallWindow from './src/screens/callWindow';
+import Recent from './src/screens/recent';
 
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="CallWindow" component={CallWindow} />
+          <Stack.Screen name="Recent" component={Recent} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="light" />

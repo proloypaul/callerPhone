@@ -26,11 +26,13 @@ export default function Home({ navigation }) {
                     <Text style={{fontFamily: typography.secondry,
                     fontSize: spacings[4],}}>Favourite</Text>
                 </View>
-                <View style={{flex:2}}>
+                <Pressable onPress={() => {
+                     navigation.navigate('Recent')
+                }} style={{flex:2}}>
                     <AntDesign name="clockcircle" size={24} color="black" />
                     <Text style={{fontFamily: typography.secondry,
                     fontSize: spacings[4],}}>Recent</Text>
-                </View>
+                </Pressable>
                 <Pressable onPress={() => {
                     navigation.navigate('CallWindow')
                 }} style={{flex:2}}>
