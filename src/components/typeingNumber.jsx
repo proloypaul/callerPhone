@@ -1,12 +1,12 @@
 import React from 'react'
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import { Entypo } from '@expo/vector-icons';
 import { typography } from '../theme/typography';
 import { spacings } from '../theme/spacing';
 import { Ionicons } from '@expo/vector-icons';
 
 
-export default function TypingNumber() {
+export default function TypingNumber({navigation}) {
     return (
         <SafeAreaView style={styles.typingNumberContainer}>
             <View style={styles.showNumberDesign}>
@@ -34,10 +34,12 @@ export default function TypingNumber() {
                 <Text style={styles.numberInnerDesign}>#</Text>
             </View>
             <View style={{flexDirection:'row', justifyContent:'center', paddingTop:20}}>
-                <View>
+                <Pressable onPress={() => {
+                    navigation.navigate('Calling')
+                }}>
                     <Ionicons name="ios-call" size={24} color='green' />
                     <Text style={{fontFamily: typography.primary, fontSize: spacings[6], color: '#FFFFFF'}}>Sim1</Text>
-                </View>
+                </Pressable>
                 <View style={{marginLeft: 50}}>
                     <Ionicons name="ios-call" size={24} color="green" />
                     <Text style={{fontFamily: typography.primary, fontSize: spacings[6], color: '#FFFFFF'}}>Sim2</Text>

@@ -7,6 +7,7 @@ import Home from './src/screens/home';
 import CallWindow from './src/screens/callWindow';
 import Recent from './src/screens/recent';
 import Favourite from './src/screens/favourite';
+import Calling from './src/screens/calling';
 
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
           <Stack.Screen name="CallWindow" component={CallWindow} />
           <Stack.Screen name="Recent" component={Recent} />
           <Stack.Screen name="Favourite" component={Favourite} />
+          <Stack.Screen name="Calling" component={Calling} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="light" />
