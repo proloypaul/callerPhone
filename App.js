@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './src/screens/home';
 import CallWindow from './src/screens/callWindow';
 import Recent from './src/screens/recent';
+import Favourite from './src/screens/favourite';
 
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="CallWindow" component={CallWindow} />
           <Stack.Screen name="Recent" component={Recent} />
+          <Stack.Screen name="Favourite" component={Favourite} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="light" />

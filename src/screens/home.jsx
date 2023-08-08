@@ -21,11 +21,13 @@ export default function Home({ navigation }) {
                 <Text style={{fontSize: spacings[10], color: 'white'}}>...</Text>
             </View> */}
             <View style={styles.homeBottomSection}>
-                <View style={{flex:2}}>
+                <Pressable onPress={() => {
+                    navigation.navigate('Favourite')
+                }} style={{flex:2}}>
                     <AntDesign name="star" size={24} color="black" />
                     <Text style={{fontFamily: typography.secondry,
                     fontSize: spacings[4],}}>Favourite</Text>
-                </View>
+                </Pressable>
                 <Pressable onPress={() => {
                      navigation.navigate('Recent')
                 }} style={{flex:2}}>
